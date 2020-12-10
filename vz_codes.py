@@ -1,14 +1,19 @@
 def byteValue(n):
-    i = 0
-    cols = {'g':0, 'y':1, 'b':2, 'r':3}
-    vals = [128,64,32,16,8,4,2,1]
-    index = 0
-    for c in n:
-        if index == 0:
-            i += 64
-        print(c)
+    str = "0b"
 
-    return i
+    for c in n:
+        if c == "g":
+            str += "00"
+        elif c == "y":
+            str += "01"
+        elif c == "b":
+            str += "10"
+        elif c == "r":
+            str += "11"
+    n = int(str, 2)
+    print(n)
+
+    return str
 
 def codeByte(str):
     x=4
@@ -20,8 +25,10 @@ def codeByte(str):
 print("Enter 16 colour codes, q to stop")
 while True:
     print("1234567890123456")
+    #line = "yyyyyrrrrbbbbbgg" #input()
     line = input()
     if line == 'q':
         break
     print(line)
     codeByte(line)
+    break
