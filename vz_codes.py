@@ -31,4 +31,3 @@ while True:
         break
     print(line)
     codeByte(line)
-    break
